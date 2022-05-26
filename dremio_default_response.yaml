@@ -1,0 +1,34 @@
+{
+	"definitions": {
+		"Retorno-Padrao": {
+			"description": "Retorno Padrão do Dremio.",
+			"type": "object",
+			"properties": {
+				"_ambiente": {
+					"type": "string",
+					"description": "Ambiente de origem dos dados."
+				},
+				"data_hora": {
+					"type": "string",
+					"description": "Data/hora do job da requisição."
+				},
+				"registros": {
+					"type": "integer",
+					"description": "Quantidade de registros retornados."
+				},
+				"dados": {
+					"type": "array",
+					"description": "Array dos registros retornados.",
+					"items": {
+						"$generic": "T"
+					}
+				},
+				"_tempo_execucao": {
+					"type": "string",
+					"description": "Tempo de processamento do job da requisição."
+				}
+			}
+		}
+	},
+	"$ref": "Retorno-Padrao"
+}
